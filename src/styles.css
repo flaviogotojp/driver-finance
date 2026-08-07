@@ -1,1 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.aplicativo {
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+  background: linear-gradient(135deg, #155eef, #4f8cff);
+  color: white;
+  padding: 28px 20px;
+  border-radius: 0 0 28px 28px;
+  box-shadow: 0 8px 24px rgba(21, 94, 239, 0.18);
+}
+
+.cabecalho h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.cabecalho p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Conteúdo */
+
+.conteudo {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 22px 16px;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 5px 18px rgba(23, 32, 51, 0.07);
+  border: 1px solid #e8edf5;
+}
+
+.card-titulo {
+  color: #697386;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.card-valor {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.card-positivo {
+  color: #159947;
+}
+
+.card-negativo {
+  color: #e5484d;
+}
+
+/* Seções */
+
+.secao {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 18px rgba(23, 32, 51, 0.06);
+  border: 1px solid #e8edf5;
+}
+
+.secao h2 {
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+
+/* Formulários */
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #566174;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d9e0eb;
+  border-radius: 12px;
+  background: #f9fbfe;
+  color: #172033;
+  outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: #155eef;
+  box-shadow: 0 0 0 3px rgba(21, 94, 239, 0.1);
+}
+
+/* Botões */
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.botao {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+}
+
+.botao-principal {
+  background: #155eef;
+  color: white;
+}
+
+.botao-secundario {
+  background: #edf2f8;
+  color: #27344d;
+}
+
+.botao-perigo {
+  background: #ffe8e8;
+  color: #c92f35;
+}
+
+/* Lista de lançamentos */
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lancamento {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
+  background: #fbfcfe;
+}
+
+.lancamento-info {
+  min-width: 0;
+}
+
+.lancamento-titulo {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.lancamento-data {
+  color: #7a8496;
+  font-size: 12px;
+}
+
+.lancamento-valor {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Tabelas */
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 13px 10px;
+  border-bottom: 1px solid #e8edf5;
+}
+
+.tabela th {
+  color: #697386;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.tabela td {
+  font-size: 14px;
+}
+
+/* Mensagem vazia */
+
+.vazio {
+  text-align: center;
+  padding: 28px 15px;
+  color: #7a8496;
+}
+
+/* Responsivo */
+
+@media (max-width: 700px) {
+  .cabecalho {
+    padding: 24px 18px;
+  }
+
+  .cabecalho h1 {
+    font-size: 24px;
+  }
+
+  .conteudo {
+    padding: 18px 12px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .secao {
+    padding: 16px;
+    border-radius: 17px;
+  }
+
+  .lancamento {
+    align-items: flex-start;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+
+  .botao {
+    width: 100%;
+  }
+}
