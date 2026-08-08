@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./styles.css";
 function App() {
   const [saldo, setSaldo] = useState(0);
   const [ganhos, setGanhos] = useState(0);
