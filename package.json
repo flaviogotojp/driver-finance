@@ -4,7 +4,7 @@
   "private": true,
   "description": "Sistema de gestão financeira para motoristas",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build",
     "build": "vite",
     "preview": "vite preview"
   },
